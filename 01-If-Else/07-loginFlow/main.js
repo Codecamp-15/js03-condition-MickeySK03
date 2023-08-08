@@ -1,15 +1,23 @@
-let a = prompt("Enter a username");
+let username = prompt("Enter a username");
+let password = prompt("Enter a password");
 
-if (a==="") {
+if (username ==="admin"&&password ==="1234"||username ==="john"&&password ==="qwerty") {
+    alert("Hello"+" "+username);
+}
+else if ((username === ""||username === null)&&(password ===""||password === null)){
+    alert("username is required");
+    alert("password is required");
+}
+else if (username === ""||username === null){
     alert("username is required");
 }
-else if (a = "admin"){
-    alert("Hello");
+else if (password ===""||password === null) {
+    alert("password is required");
+
 }
 
 
-let b = prompt("Enter a password");
-if (b==="") {
-    alert("password is required");
+else {
+    alert("invalid username or password");
 }
 
